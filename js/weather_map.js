@@ -58,16 +58,16 @@
             units: "imperial",
             exclude: 'minutely,hourly,current,alerts'
         }).done(function (data) {
-            // console.log(data);
 
-            //appending the weather
+
+
             let forecasts = data.list
             // console.log("Data List: ", data.list)
             let appendedForecast = append(forecasts);
             $('#weather').html(appendedForecast);
             // console.log("forecast: ", forecasts)
 
-            //Rendering City Name
+
             let city = data.city.name
             let country = data.city.country
             $('#city-name').html(`${city}, ${country}`);
